@@ -3,6 +3,7 @@ import type {ThemeOptions} from "@mui/material";
 import {Button, Grid, Typography} from "@mui/material";
 import flowerLImg from "../src/static/flowers/FlowerLarge.png";
 import program from "../src/static/Program.png"
+import program2 from "../src/static/Program2.png"
 
 const paletteTheme: ThemeOptions = {
     palette: {
@@ -151,7 +152,7 @@ function App() {
                 <Typography variant="h5" className="dateText">2025. Május 31</Typography>
                 <br/>
 
-                <img src={program} alt="program" className="programImg"/>
+                <img src={program2} alt="program" className="programImg"/>
 
                 <br/>
 
