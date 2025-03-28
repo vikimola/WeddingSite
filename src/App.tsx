@@ -148,7 +148,7 @@ function App() {
 
                 <br/>
 
-                <Typography variant="h5" className="dateText">2025. Május 25</Typography>
+                <Typography variant="h5" className="dateText">2025. Május 31</Typography>
                 <br/>
 
                 <img src={program} alt="program" className="programImg"/>
