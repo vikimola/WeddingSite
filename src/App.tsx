@@ -1,12 +1,8 @@
 import {createTheme, ThemeProvider} from "@mui/material/styles";
-import {makeStyles} from "@mui/styles";
 import type {ThemeOptions} from "@mui/material";
-import flowerSImg from "../src/static/flowers/FlowerSmall.png";
+import {Button, Grid, Typography} from "@mui/material";
 import flowerLImg from "../src/static/flowers/FlowerLarge.png";
 import program from "../src/static/Program.png"
-import upperFlower from "../src/static/flowers/upperFlower.png"
-import {Grid, Typography, useMediaQuery, Theme, Button} from "@mui/material";
-import {useTheme} from '@material-ui/core/styles';
 
 const paletteTheme: ThemeOptions = {
     palette: {
@@ -84,8 +80,6 @@ const paletteTheme: ThemeOptions = {
 };
 
 function App() {
-    const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up(theme.breakpoints.values.md));
 
 
     return (
