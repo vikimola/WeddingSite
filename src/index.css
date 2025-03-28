@@ -16,7 +16,7 @@
 
 body {
     /*background-color: teal;*/
-    margin: 0;
+    margin: 0 1rem;
 
 }
 
@@ -29,16 +29,7 @@ body {
 }
 
 
-
 .avgDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.greeting {
-    color: #9a4e23;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +42,9 @@ body {
 }
 
 
-
+.dateText {
+    color: #9a4e23;
+}
 
 .programImg {
     width: 80%;
@@ -66,7 +59,7 @@ body {
     align-items: center;
 }
 
-.gridUpperImg{
+.gridUpperImg {
     width: 100%;
     max-width: 800px;
     transform: scaleY(-1) !important;

@@ -54,9 +54,9 @@ const paletteTheme: ThemeOptions = {
         h1: {
             fontFamily: "'Great Vibes', cursive",
             color: "#b6693d",
-            fontSize: "4rem",
+            fontSize: "4.5rem",
             "@media (min-width:650px)": {
-                fontSize: "5rem",
+                fontSize: "5.5rem",
             },
             "@media (min-width:800px)": {
                 fontSize: "7rem",
@@ -66,17 +66,17 @@ const paletteTheme: ThemeOptions = {
             },
         },
 
-        h6: {
+        h5: {
             // color: "#b6693d",
             fontSize: "1rem",
             "@media (min-width:650px)": {
-                fontSize: "1.3rem",
+                fontSize: "1.1rem",
             },
             "@media (min-width:800px)": {
-                fontSize: "1.5rem",
+                fontSize: "1.3rem",
             },
             "@media (min-width:1280px)": {
-                fontSize: "1.8rem",
+                fontSize: "1.5rem",
             },
         }
 
@@ -123,49 +123,43 @@ function App() {
 
                 <br/>
 
-                <div className="avgDiv">
-                    <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
-                </div>
+                <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
                 <br/>
 
 
-                <div className="avgDiv">
-                    <Typography variant="h6" className="greetingText">Köszönjük hogy meglátogattad a
-                        weboldalunkat!</Typography>
-                </div>
+                <Typography variant="h5" className="greetingText">Köszönjük hogy meglátogattad a
+                    weboldalunkat!</Typography>
 
                 <br/>
 
-                <div className="avgDiv">
-                    <Button
-                        variant="outlined"
-                        sx={{
-                            color: "#655f1a",
-                            borderColor: "#b6693d",
+                <Button
+                    variant="outlined"
+                    sx={{
+                        color: "#655f1a",
+                        borderColor: "#b6693d",
 
-                            "&:hover": {
-                                color: "#b6693d",
-                                borderColor: "#485935",
-                            }
-                        }}
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScC_4RoHd--PYRHb81cJsq9S11JEhWaYsQSV00X_Hl-dQxTpg/viewform"
+                        "&:hover": {
+                            color: "#9a4e23",
+                            borderColor: "#485935",
+                        }
+                    }}
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScC_4RoHd--PYRHb81cJsq9S11JEhWaYsQSV00X_Hl-dQxTpg/viewform"
 
-                        target="_blank"
-                    >
+                    target="_blank"
+                >
 
-                        Visszajelzek!
-                    </Button>
+                    Visszajelzek!
+                </Button>
 
-                </div>
 
                 <br/>
 
-
-                <div className="avgDiv">
-                    <img src={program} alt="program" className="programImg"/>
-                </div>
+                <Typography variant="h5" className="dateText">2025. Május 25</Typography>
                 <br/>
 
+                <img src={program} alt="program" className="programImg"/>
+
+                <br/>
 
                 <Grid container sx={{
                     width: "100%",
@@ -187,7 +181,6 @@ function App() {
                     </Grid>
 
                 </Grid>
-
             </div>
         </ThemeProvider>
     )
