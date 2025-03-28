@@ -2,7 +2,6 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import type {ThemeOptions} from "@mui/material";
 import {Button, Grid, Typography} from "@mui/material";
 import flowerLImg from "../src/static/flowers/FlowerLarge.png";
-import program from "../src/static/Program.png"
 import program2 from "../src/static/Program2.png"
 
 const paletteTheme: ThemeOptions = {
@@ -47,19 +46,19 @@ const paletteTheme: ThemeOptions = {
     },
 
     typography: {
-        fontFamily: "'Noto Serif Ethiopic', cursive",
+        fontFamily: "'Bree Serif', serif",
         h1: {
             fontFamily: "'Great Vibes', cursive",
             color: "#b6693d",
-            fontSize: "4.5rem",
+            fontSize: "4.7rem",
             "@media (min-width:650px)": {
-                fontSize: "5.5rem",
+                fontSize: "5.7rem",
             },
             "@media (min-width:800px)": {
-                fontSize: "7rem",
+                fontSize: "7.5rem",
             },
             "@media (min-width:1280px)": {
-                fontSize: "9rem",
+                fontSize: "9.5rem",
             },
         },
 
@@ -67,15 +66,16 @@ const paletteTheme: ThemeOptions = {
             // color: "#b6693d",
             fontSize: "1rem",
             "@media (min-width:650px)": {
-                fontSize: "1.1rem",
-            },
-            "@media (min-width:800px)": {
                 fontSize: "1.3rem",
             },
-            "@media (min-width:1280px)": {
+            "@media (min-width:800px)": {
                 fontSize: "1.5rem",
             },
-        }
+            "@media (min-width:1280px)": {
+                fontSize: "1.7rem",
+            },
+        },
+
 
     },
 };
@@ -117,7 +117,6 @@ function App() {
 
 
                 <br/>
-
                 <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
                 <br/>
 
@@ -132,6 +131,7 @@ function App() {
                     sx={{
                         color: "#655f1a",
                         borderColor: "#b6693d",
+                        textTransform: "none",
 
                         "&:hover": {
                             color: "#9a4e23",
@@ -142,14 +142,13 @@ function App() {
 
                     target="_blank"
                 >
-
-                    Visszajelzek!
+                    <Typography variant="h6">Visszajelzek!</Typography>
                 </Button>
 
 
                 <br/>
 
-                <Typography variant="h5" className="dateText">2025. Május 31</Typography>
+                <Typography variant="h5" className="dateText">2025. Május 31.</Typography>
                 <br/>
 
                 <img src={program2} alt="program" className="programImg"/>
