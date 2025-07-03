@@ -2,11 +2,18 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import type {ThemeOptions} from "@mui/material";
 import {Button, Grid, Typography} from "@mui/material";
 import flowerLImg from "../src/static/flowers/FlowerLarge.png";
-import program2 from "../src/static/Program2.png"
+import timetable2 from "./static/TimetableSM/Program2.png"
+import timetableHR_hu from "./static/TimetableHR/Timetable_hu.png"
+import timetableHR_ro from "./static/TimetableHR/Timetable_ro.png"
+import timetableHR_en from "./static/TimetableHR/Timetable_en.png"
+import LanguageSelector from "./components/LanguageSelector.tsx";
+import {useTranslation} from "react-i18next";
+
+import {Suspense} from "react";
+
 
 const paletteTheme: ThemeOptions = {
     palette: {
-        mode: "light",
         primary: {
             main: "#b6693d",
             contrastText: "#F5F5F5",
@@ -76,11 +83,31 @@ const paletteTheme: ThemeOptions = {
             },
         },
 
-
+        button: {
+            textTransform: 'none'
+        }
     },
+
 };
 
 function App() {
+
+    const {i18n} = useTranslation();
+    const timetableImgs: Record<string, string> = {
+        hu: timetableHR_hu,
+        ro: timetableHR_ro,
+        en: timetableHR_en
+    }
+    const currentLang = i18n.language;
+    const timatableImg = timetableImgs[currentLang] || timetableHR_hu;
+
+
+    const {t} = useTranslation();
+
+    const initialGreeting = useTranslation("initialGreeting");
+    const feedbackBtn = t('feedbackBtn');
+    const date = t("date");
+    const accommodationInfosTBC = t("accommodationInfosTBC");
 
 
     return (
@@ -115,15 +142,22 @@ function App() {
 
                 </Grid>
 
+                <br/>
 
+                <LanguageSelector/>
+
+
+
+                <br/>
                 <br/>
                 <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
                 <br/>
+                <br/>
 
 
-                <Typography variant="h5" className="greetingText">Köszönjük hogy meglátogattad a
-                    weboldalunkat!</Typography>
+                <Typography variant="h5" className="greenText">{t("initialGreeting")}</Typography>
 
+                <br/>
                 <br/>
 
                 <Button
@@ -142,16 +176,24 @@ function App() {
 
                     target="_blank"
                 >
-                    <Typography variant="h6">Visszajelzek!</Typography>
+                    <Typography variant="h6">{feedbackBtn}</Typography>
                 </Button>
 
 
                 <br/>
-
-                <Typography variant="h5" className="dateText">2025. Május 31.</Typography>
                 <br/>
 
-                <img src={program2} alt="program" className="programImg"/>
+                <Typography variant="h5" className="brownText">{date}</Typography>
+
+                <br/>
+
+                <img src={timatableImg} alt="program" className="programImg"/>
+
+                <br/>
+                <br/>
+
+                <Typography variant="p" className="greenText">
+                    {accommodationInfosTBC}</Typography>
 
                 <br/>
 
