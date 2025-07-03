@@ -149,12 +149,10 @@ function App() {
                 <br/>
                 <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
                 <br/>
-                <br/>
 
 
                 <Typography variant="h5" className="greenText">{initialGreeting}</Typography>
 
-                <br/>
                 <br/>
 
                 <Button
@@ -177,7 +175,6 @@ function App() {
                 </Button>
 
 
-                <br/>
                 <br/>
 
                 <Typography variant="h5" className="brownText">{date}</Typography>

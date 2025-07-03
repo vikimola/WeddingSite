@@ -7,7 +7,7 @@ import "./i18n.tsx";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Suspense fallback={<h1 style={{textAlign:'center'}}> Loading </h1>}>
+        <Suspense fallback={<h5 style={{textAlign:'center'}}> Loading </h5>}>
             <App/>
         </Suspense>
     </React.StrictMode>,
