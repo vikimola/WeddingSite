@@ -8,7 +8,7 @@ import { FiLoader } from "react-icons/fi";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Suspense fallback={<h1 style={{textAlign:'center'}}> <FiLoader /> </h1>}>
+        <Suspense fallback={<h1 style={{textAlign:'center'}}> <FiLoader size={24} /> </h1>}>
             <App/>
         </Suspense>
     </React.StrictMode>,

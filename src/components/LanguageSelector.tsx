@@ -33,9 +33,7 @@ const LanguageSelector = () => {
 
         <ButtonGroup variant="outlined" color="primary" size="small">
             {languageOptions.map(({language, code}, key) => (
-                <Button key={code} onClick={() => handleLanguageChange(code)}
-                        disabled={language === code}
-                >
+                <Button key={code} onClick={() => handleLanguageChange(code)}>
                     {language}
                 </Button>
             ))}

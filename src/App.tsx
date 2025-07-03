@@ -2,14 +2,12 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import type {ThemeOptions} from "@mui/material";
 import {Button, Grid, Typography} from "@mui/material";
 import flowerLImg from "../src/static/flowers/FlowerLarge.png";
-import timetable2 from "./static/TimetableSM/Program2.png"
 import timetableHR_hu from "./static/TimetableHR/Timetable_hu.png"
 import timetableHR_ro from "./static/TimetableHR/Timetable_ro.png"
 import timetableHR_en from "./static/TimetableHR/Timetable_en.png"
 import LanguageSelector from "./components/LanguageSelector.tsx";
 import {useTranslation} from "react-i18next";
 
-import {Suspense} from "react";
 
 
 const paletteTheme: ThemeOptions = {
@@ -192,7 +190,7 @@ function App() {
                 <br/>
                 <br/>
 
-                <Typography variant="p" className="greenText">
+                <Typography variant="body1" className="greenText">
                     {accommodationInfosTBC}</Typography>
 
                 <br/>
