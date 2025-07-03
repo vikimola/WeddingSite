@@ -101,7 +101,7 @@ function App() {
 
     const {t} = useTranslation();
 
-    const initialGreeting = useTranslation("initialGreeting");
+    const initialGreeting = t("initialGreeting");
     const feedbackBtn = t('feedbackBtn');
     const date = t("date");
     const accommodationInfosTBC = t("accommodationInfosTBC");
@@ -152,7 +152,7 @@ function App() {
                 <br/>
 
 
-                <Typography variant="h5" className="greenText">{t("initialGreeting")}</Typography>
+                <Typography variant="h5" className="greenText">{initialGreeting}</Typography>
 
                 <br/>
                 <br/>
