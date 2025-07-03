@@ -9,7 +9,6 @@ import LanguageSelector from "./components/LanguageSelector.tsx";
 import {useTranslation} from "react-i18next";
 
 
-
 const paletteTheme: ThemeOptions = {
     palette: {
         primary: {

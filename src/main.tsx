@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App.tsx'
 import "./i18n.tsx";
-import { FiLoader } from "react-icons/fi";
+import {FiLoader} from "react-icons/fi";
 
 
 ReactDOM.render(

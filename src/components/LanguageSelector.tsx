@@ -3,19 +3,17 @@ import i18next from "i18next";
 import {useTranslation} from "react-i18next";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
-import * as React from "react";
 
 type languageOption = { language: string; code: string };
 
 const languageOptions: languageOption[] = [
-
     {language: "Magyar", code: "hu"},
     {language: "Română", code: "ro"},
     {language: "English", code: "en"}
 ];
 
 const LanguageSelector = () => {
-    const [language, setLanguage] = useState<string>(i18next.language as string);
+    const [_, setLanguage] = useState<string>(i18next.language as string);
 
     const {i18n} = useTranslation();
 
@@ -32,7 +30,7 @@ const LanguageSelector = () => {
     return (
 
         <ButtonGroup variant="outlined" color="primary" size="small">
-            {languageOptions.map(({language, code}, key) => (
+            {languageOptions.map(({language, code}) => (
                 <Button key={code} onClick={() => handleLanguageChange(code)}>
                     {language}
                 </Button>
