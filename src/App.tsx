@@ -89,14 +89,24 @@ const paletteTheme: ThemeOptions = {
 
 function App() {
 
-    const {i18n} = useTranslation();
     const timetableImgs: Record<string, string> = {
         hu: timetableHR_hu,
         ro: timetableHR_ro,
         en: timetableHR_en
     }
+
+    const formLinks: Record<string, string> = {
+        hu: 'https://docs.google.com/forms/d/e/1FAIpQLScC_4RoHd--PYRHb81cJsq9S11JEhWaYsQSV00X_Hl-dQxTpg/viewform?usp=dialog',
+        ro: 'https://docs.google.com/forms/d/e/1FAIpQLSdl1ITbzVVufShj--ePDHB7WkDztr_j-gO9DTxccrBmgX2mvQ/viewform?usp=dialog',
+        en: 'https://docs.google.com/forms/d/e/1FAIpQLScuyM7zb1L5FX5mmpR4PyoDAlJOLu4u960p6B_f3sPQhZ3odQ/viewform?usp=dialog'
+
+    }
+
+    const {i18n} = useTranslation();
+
     const currentLang = i18n.language;
     const timatableImg = timetableImgs[currentLang] || timetableHR_hu;
+    const formLink = formLinks[currentLang] || 'https://docs.google.com/forms/d/e/1FAIpQLScC_4RoHd--PYRHb81cJsq9S11JEhWaYsQSV00X_Hl-dQxTpg/viewform?usp=dialog';
 
 
     const {t} = useTranslation();
@@ -144,7 +154,6 @@ function App() {
                 <LanguageSelector/>
 
 
-
                 <br/>
                 <br/>
                 <Typography variant="h1" className="titleText">Vik & Gerő</Typography>
@@ -167,7 +176,7 @@ function App() {
                             borderColor: "#485935",
                         }
                     }}
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScC_4RoHd--PYRHb81cJsq9S11JEhWaYsQSV00X_Hl-dQxTpg/viewform"
+                    href={formLink}
 
                     target="_blank"
                 >
